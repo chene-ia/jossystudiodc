@@ -1,0 +1,30 @@
+/* Configuración de colores personalizados y degradados sofisticados */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --luxury-black: #0A0A0A;
+    --luxury-dark: #141414;
+    --luxury-card: #1F1F1F;
+    --luxury-beige: #E8D3C1;
+    --luxury-champagne: #D4AF37;
+    --luxury-gold: #C5A059;
+}
+
+body {
+    background-color: var(--luxury-black);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.gold-gradient-text {
+    background: linear-gradient(135deg, #E8D3C1 0%, #D4AF37 50%, #C5A059 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+}
