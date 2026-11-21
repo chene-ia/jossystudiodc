@@ -1,13 +1,13 @@
-/* Configuración de colores personalizados y degradados sofisticados */
+/* Paleta de colores basada en el Logotipo oficial de JossyStudioDC */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-    --luxury-black: #0A0A0A;
-    --luxury-dark: #141414;
-    --luxury-card: #1F1F1F;
-    --luxury-beige: #E8D3C1;
-    --luxury-champagne: #D4AF37;
-    --luxury-gold: #C5A059;
+    --luxury-black: #120D0F;      /* Fondo principal: Un tono oscuro muy sutil con matiz borgoña/rosa profundo */
+    --luxury-dark: #1E1518;       /* Tarjetas: Fondo ligeramente más claro para contraste elegante */
+    --luxury-card: #2A1D22;       /* Elementos internos / Botones interactivos */
+    --luxury-beige: #F9E4E9;      /* Texto secundario: Rosado pastel muy suave y claro */
+    --luxury-champagne: #E6C280;  /* Acentos de brillo champagne */
+    --luxury-gold: #D4AF37;       /* Dorado principal de tu corona y letras */
 }
 
 body {
@@ -20,11 +20,11 @@ body {
 }
 
 .gold-gradient-text {
-    background: linear-gradient(135deg, #E8D3C1 0%, #D4AF37 50%, #C5A059 100%);
+    background: linear-gradient(135deg, #F9E4E9 0%, #E6C280 50%, #D4AF37 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-bg {
-    background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+    background: linear-gradient(135deg, #E6C280 0%, #D4AF37 100%);
 }
