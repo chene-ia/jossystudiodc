@@ -17,23 +17,23 @@
 </head>
 <body class="bg-luxury-black text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-black min-h-screen relative flex flex-col justify-between py-6 px-4">
 
-    <!-- MODAL / ANUNCIO DE INICIO LIMPIO (Solo tu imagen y controles) -->
+    <!-- MODAL / ANUNCIO DE INICIO (POP-UP DE HORARIOS PERFECTAMENTE AJUSTADO) -->
     <div id="promoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
-        <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-4 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
+        <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-5 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
             
-            <!-- Botón X flotante para cerrar el anuncio -->
-            <button onclick="closeModal()" class="absolute -top-3 -right-3 z-10 text-black bg-luxury-gold hover:bg-white w-10 h-10 rounded-full flex items-center justify-center border-2 border-luxury-dark shadow-lg transition-all hover:scale-110" aria-label="Cerrar anuncio">
-                <i class="fa-solid fa-xmark text-lg"></i>
+            <!-- Botón X perfectamente acomodado y visible dentro del modal -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 z-20 bg-luxury-black/80 hover:bg-luxury-gold text-luxury-gold hover:text-black w-9 h-9 rounded-full flex items-center justify-center border border-luxury-gold/50 transition-all shadow-md" aria-label="Cerrar anuncio">
+                <i class="fa-solid fa-xmark text-base"></i>
             </button>
 
-            <!-- Imagen limpia ocupando todo el marco -->
-            <div class="rounded-2xl overflow-hidden border border-luxury-gold/30 bg-black/40 p-1">
-                <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto object-contain max-h-[380px] mx-auto rounded-xl">
+            <!-- Imagen ocupando todo el espacio interno sin márgenes negros -->
+            <div class="rounded-2xl overflow-hidden border border-luxury-gold/30 w-full">
+                <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto block object-cover">
             </div>
 
-            <!-- Botón de acción para entrar a la web -->
+            <!-- Botón de acción principal perfectamente proporcionado -->
             <button onclick="closeModal()" class="w-full py-3.5 px-6 rounded-2xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
-                Ver Página Principal
+                VER PÁGINA PRINCIPAL
             </button>
         </div>
     </div>
