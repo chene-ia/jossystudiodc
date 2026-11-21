@@ -1,23 +1,23 @@
-// Generador dinámico del código QR vinculado a la dirección web pública definitiva
+// Generador dinámico del código QR vinculado a la dirección web pública real de la página
 document.addEventListener("DOMContentLoaded", function() {
     const qrContainer = document.getElementById('qrcode');
     
-    // URL pública definitiva de tu negocio (Enlace Puente para tu letrero luminoso)
-    const siteUrl = "https://jossystudiodc.com"; 
+    // Captura automáticamente la dirección web actual (GitHub Pages)
+    const siteUrl = window.location.href; 
 
     if (qrContainer) {
         new QRCode(qrContainer, {
             text: siteUrl,
-            width: 150,
-            height: 150,
-            colorDark: "#0A0A0A",
+            width: 160,
+            height: 160,
+            colorDark: "#120D0F",
             colorLight: "#ffffff",
             correctLevel: QRCode.CorrectLevel.H
         });
     }
 });
 
-// Función para descargar el QR en PNG o SVG
+// Función para descargar el QR en alta resolución PNG o SVG
 function downloadQR(format) {
     const qrContainer = document.getElementById('qrcode');
     const img = qrContainer.querySelector('img');
@@ -38,7 +38,7 @@ function downloadQR(format) {
         link.click();
         document.body.removeChild(link);
     } else if (format === 'svg') {
-        const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="100%" height="100%" fill="#ffffff"/><image href="${imageUrl}" width="320" height="320" x="40" y="40"/></svg>`;
+        const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500"><rect width="100%" height="100%" fill="#ffffff"/><image href="${imageUrl}" width="420" height="420" x="40" y="40"/></svg>`;
         const blob = new Blob([svgString], { type: 'image/svg+xml' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
