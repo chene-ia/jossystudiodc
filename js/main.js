@@ -1,4 +1,15 @@
-// Generador dinámico del código QR vinculado a la dirección web pública real de la página
+// Función para cerrar el anuncio de inicio (Pop-up de horarios)
+function closeModal() {
+    const modal = document.getElementById('promoModal');
+    if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300); // Transición suave de cierre
+    }
+}
+
+// Generador dinámico del código QR y control de la página
 document.addEventListener("DOMContentLoaded", function() {
     const qrContainer = document.getElementById('qrcode');
     
