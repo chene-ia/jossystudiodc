@@ -17,6 +17,38 @@
 </head>
 <body class="bg-luxury-black text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-black min-h-screen relative flex flex-col justify-between py-6 px-4">
 
+    <!-- MODAL / ANUNCIO DE INICIO (POP-UP DE HORARIOS) -->
+    <div id="promoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
+        <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
+            
+            <!-- Botón X para cerrar el anuncio -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-luxury-card w-9 h-9 rounded-full flex items-center justify-center border border-luxury-gold/30 transition-all hover:scale-110" aria-label="Cerrar anuncio">
+                <i class="fa-solid fa-xmark text-lg text-luxury-gold"></i>
+            </button>
+
+            <!-- Título del Anuncio -->
+            <div class="space-y-1 pt-2">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-luxury-beige font-semibold">Aviso Importante</span>
+                <h3 class="font-serif text-2xl font-bold gold-gradient-text">Horarios de Atención</h3>
+            </div>
+
+            <!-- Imagen del Anuncio con tus horarios -->
+            <div class="rounded-xl overflow-hidden border border-luxury-gold/30 bg-luxury-card p-2">
+                <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto object-contain max-h-[260px] mx-auto rounded-lg">
+            </div>
+
+            <!-- Texto descriptivo opcional -->
+            <div class="text-xs text-gray-300 space-y-1 font-light">
+                <p class="font-semibold text-luxury-beige">¡Te esperamos en nuestro estudio!</p>
+            </div>
+
+            <!-- Botón de acción para entrar a la web -->
+            <button onclick="closeModal()" class="w-full py-3 px-6 rounded-xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
+                Ver Página Principal
+            </button>
+        </div>
+    </div>
+
     <!-- IMAGEN DE FONDO ELEGANTE QUE CUBRE LA PÁGINA -->
     <div class="absolute inset-0 z-0 opacity-20 overflow-hidden">
         <img src="logo.jpeg" alt="Fondo JossyStudioDC" class="w-full h-full object-cover blur-sm scale-105">
@@ -26,12 +58,12 @@
     <!-- CONTENEDOR PRINCIPAL -->
     <main class="relative z-10 w-full max-w-md mx-auto my-auto space-y-5 py-4">
         
-        <!-- CABEZERA MINIMALISTA (Texto duplicado eliminado, solo marca sutil) -->
+        <!-- CABEZERA MINIMALISTA -->
         <header class="text-center space-y-1">
             <span class="text-xs uppercase tracking-[0.4em] text-luxury-beige font-medium">Bienvenidos a</span>
         </header>
 
-        <!-- LOGOTIPO PRINCIPAL (Ahora es el protagonista absoluto) -->
+        <!-- LOGOTIPO PRINCIPAL -->
         <div class="relative rounded-2xl overflow-hidden border border-luxury-gold/40 bg-luxury-dark/90 backdrop-blur-md p-3 shadow-2xl flex items-center justify-center aspect-square max-w-[260px] mx-auto">
             <img src="logo.jpeg" alt="JossyStudioDC Logo Oficial" class="w-full h-full object-contain">
         </div>
@@ -41,7 +73,7 @@
             <h2 class="font-serif italic text-lg sm:text-xl text-luxury-beige">"Realza tu belleza, descubre tu estilo"</h2>
         </div>
 
-        <!-- BOTONES PRINCIPALES FLOTANDO SOBRE EL DISEÑO -->
+        <!-- BOTONES PRINCIPALES -->
         <div class="space-y-3 pt-1">
             <!-- Botón Reservar Cita -->
             <a href="https://wa.me/51993676070?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita." target="_blank"
@@ -62,7 +94,7 @@
             </a>
         </div>
 
-        <!-- SECCIÓN DE GENERACIÓN DE QR INTELIGENTE -->
+        <!-- SECCIÓN DE QR INTELIGENTE -->
         <div class="pt-3 border-t border-luxury-gold/20 text-center space-y-2">
             <details class="group">
                 <summary class="text-xs uppercase tracking-widest text-luxury-gold cursor-pointer hover:underline font-semibold">
