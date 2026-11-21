@@ -17,33 +17,22 @@
 </head>
 <body class="bg-luxury-black text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-black min-h-screen relative flex flex-col justify-between py-6 px-4">
 
-    <!-- MODAL / ANUNCIO DE INICIO (POP-UP DE HORARIOS) -->
-    <div id="promoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
-        <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
+    <!-- MODAL / ANUNCIO DE INICIO LIMPIO (Solo tu imagen y controles) -->
+    <div id="promoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
+        <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-4 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
             
-            <!-- Botón X para cerrar el anuncio -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-luxury-card w-9 h-9 rounded-full flex items-center justify-center border border-luxury-gold/30 transition-all hover:scale-110" aria-label="Cerrar anuncio">
-                <i class="fa-solid fa-xmark text-lg text-luxury-gold"></i>
+            <!-- Botón X flotante para cerrar el anuncio -->
+            <button onclick="closeModal()" class="absolute -top-3 -right-3 z-10 text-black bg-luxury-gold hover:bg-white w-10 h-10 rounded-full flex items-center justify-center border-2 border-luxury-dark shadow-lg transition-all hover:scale-110" aria-label="Cerrar anuncio">
+                <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
-            <!-- Título del Anuncio -->
-            <div class="space-y-1 pt-2">
-                <span class="text-[10px] uppercase tracking-[0.3em] text-luxury-beige font-semibold">Aviso Importante</span>
-                <h3 class="font-serif text-2xl font-bold gold-gradient-text">Horarios de Atención</h3>
-            </div>
-
-            <!-- Imagen del Anuncio con tus horarios -->
-            <div class="rounded-xl overflow-hidden border border-luxury-gold/30 bg-luxury-card p-2">
-                <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto object-contain max-h-[260px] mx-auto rounded-lg">
-            </div>
-
-            <!-- Texto descriptivo opcional -->
-            <div class="text-xs text-gray-300 space-y-1 font-light">
-                <p class="font-semibold text-luxury-beige">¡Te esperamos en nuestro estudio!</p>
+            <!-- Imagen limpia ocupando todo el marco -->
+            <div class="rounded-2xl overflow-hidden border border-luxury-gold/30 bg-black/40 p-1">
+                <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto object-contain max-h-[380px] mx-auto rounded-xl">
             </div>
 
             <!-- Botón de acción para entrar a la web -->
-            <button onclick="closeModal()" class="w-full py-3 px-6 rounded-xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
+            <button onclick="closeModal()" class="w-full py-3.5 px-6 rounded-2xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
                 Ver Página Principal
             </button>
         </div>
