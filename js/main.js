@@ -1,3 +1,20 @@
+// Funciones para abrir y cerrar el selector de Staff / WhatsApp
+function openStaffModal() {
+    const staffModal = document.getElementById('staffModal');
+    if (staffModal) {
+        staffModal.classList.remove('hidden');
+        staffModal.classList.add('flex');
+    }
+}
+
+function closeStaffModal() {
+    const staffModal = document.getElementById('staffModal');
+    if (staffModal) {
+        staffModal.classList.remove('flex');
+        staffModal.classList.add('hidden');
+    }
+}
+
 // Función para cerrar el anuncio de inicio (Pop-up de horarios)
 function closeModal() {
     const modal = document.getElementById('promoModal');
@@ -5,15 +22,13 @@ function closeModal() {
         modal.style.opacity = '0';
         setTimeout(() => {
             modal.style.display = 'none';
-        }, 300); // Transición suave de cierre
+        }, 300);
     }
 }
 
 // Generador dinámico del código QR y control de la página
 document.addEventListener("DOMContentLoaded", function() {
     const qrContainer = document.getElementById('qrcode');
-    
-    // Captura automáticamente la dirección web actual (GitHub Pages)
     const siteUrl = window.location.href; 
 
     if (qrContainer) {
