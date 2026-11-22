@@ -1,3 +1,41 @@
+// Control del Carrusel de Anuncios (Nuevos Servicios y Horarios)
+let slideIndex = 1;
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("carousel-slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (!slides.length) return;
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" bg-luxury-gold", " bg-luxury-gold/40");
+    }
+    
+    slides[slideIndex - 1].style.display = "block";  
+    dots[slideIndex - 1].className = dots[slideIndex - 1].className.replace(" bg-luxury-gold/40", " bg-luxury-gold");
+}
+
+// Iniciar carrusel al cargar
+document.addEventListener("DOMContentLoaded", function() {
+    showSlides(slideIndex);
+});
+
 // Funciones para abrir y cerrar el selector de Staff / WhatsApp
 function openStaffModal() {
     const staffModal = document.getElementById('staffModal');
@@ -15,7 +53,7 @@ function closeStaffModal() {
     }
 }
 
-// Función para cerrar el anuncio de inicio (Pop-up de horarios)
+// Función para cerrar el anuncio de inicio
 function closeModal() {
     const modal = document.getElementById('promoModal');
     if (modal) {
@@ -26,7 +64,7 @@ function closeModal() {
     }
 }
 
-// Generador dinámico del código QR y control de la página
+// Generador dinámico del código QR
 document.addEventListener("DOMContentLoaded", function() {
     const qrContainer = document.getElementById('qrcode');
     const siteUrl = window.location.href; 
