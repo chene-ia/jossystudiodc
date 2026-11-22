@@ -17,28 +17,59 @@
 </head>
 <body class="bg-luxury-black text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-black min-h-screen relative flex flex-col justify-between py-6 px-4">
 
-    <!-- MODAL / ANUNCIO DE INICIO (POP-UP DE HORARIOS PERFECTAMENTE AJUSTADO) -->
+    <!-- MODAL / ANUNCIO DE INICIO (HORARIOS) -->
     <div id="promoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
         <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-5 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
-            
-            <!-- Botón X perfectamente acomodado y visible dentro del modal -->
             <button onclick="closeModal()" class="absolute top-3 right-3 z-20 bg-luxury-black/80 hover:bg-luxury-gold text-luxury-gold hover:text-black w-9 h-9 rounded-full flex items-center justify-center border border-luxury-gold/50 transition-all shadow-md" aria-label="Cerrar anuncio">
                 <i class="fa-solid fa-xmark text-base"></i>
             </button>
-
-            <!-- Imagen ocupando todo el espacio interno sin márgenes negros -->
             <div class="rounded-2xl overflow-hidden border border-luxury-gold/30 w-full">
                 <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto block object-cover">
             </div>
-
-            <!-- Botón de acción principal perfectamente proporcionado -->
             <button onclick="closeModal()" class="w-full py-3.5 px-6 rounded-2xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
                 VER PÁGINA PRINCIPAL
             </button>
         </div>
     </div>
 
-    <!-- IMAGEN DE FONDO ELEGANTE QUE CUBRE LA PÁGINA -->
+    <!-- MODAL / SELECTOR DE STAFF PARA WHATSAPP -->
+    <div id="staffModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
+        <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center space-y-4">
+            <button onclick="closeStaffModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-luxury-card w-8 h-8 rounded-full flex items-center justify-center border border-luxury-gold/30">
+                <i class="fa-solid fa-xmark text-sm text-luxury-gold"></i>
+            </button>
+            
+            <div class="space-y-1 pt-2">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-luxury-beige font-semibold">Atención Personalizada</span>
+                <h3 class="font-serif text-2xl font-bold gold-gradient-text">Elige con quién deseas atenderte</h3>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+                <!-- Opcion 1: Manicurista (Número Principal actual) -->
+                <a href="https://wa.me/51993676070?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita%20de%20Manicure." target="_blank"
+                   class="w-full py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-gray-200 bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
+                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-hand-sparkles text-luxury-gold group-hover:text-black"></i> Manicurista (Uñas)</span>
+                    <i class="fa-brands fa-whatsapp text-[#25D366] text-base"></i>
+                </a>
+
+                <!-- Opcion 2: Estilista (Número de prueba 1) -->
+                <a href="https://wa.me/51999999991?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita%20con%20la%20Estilista." target="_blank"
+                   class="w-full py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-gray-200 bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
+                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-scissors text-luxury-gold group-hover:text-black"></i> Estilista (Cabello)</span>
+                    <i class="fa-brands fa-whatsapp text-[#25D366] text-base"></i>
+                </a>
+
+                <!-- Opcion 3: Fisioterapeuta / Masajista (Número de prueba 2) -->
+                <a href="https://wa.me/51999999992?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita%20de%20Fisioterapia%20o%20Masajes." target="_blank"
+                   class="w-full py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-gray-200 bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
+                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-spa text-luxury-gold group-hover:text-black"></i> Fisioterapeuta (Masajes)</span>
+                    <i class="fa-brands fa-whatsapp text-[#25D366] text-base"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGEN DE FONDO -->
     <div class="absolute inset-0 z-0 opacity-20 overflow-hidden">
         <img src="logo.jpeg" alt="Fondo JossyStudioDC" class="w-full h-full object-cover blur-sm scale-105">
     </div>
@@ -47,36 +78,31 @@
     <!-- CONTENEDOR PRINCIPAL -->
     <main class="relative z-10 w-full max-w-md mx-auto my-auto space-y-5 py-4">
         
-        <!-- CABEZERA MINIMALISTA -->
         <header class="text-center space-y-1">
             <span class="text-xs uppercase tracking-[0.4em] text-luxury-beige font-medium">Bienvenidos a</span>
         </header>
 
-        <!-- LOGOTIPO PRINCIPAL -->
         <div class="relative rounded-2xl overflow-hidden border border-luxury-gold/40 bg-luxury-dark/90 backdrop-blur-md p-3 shadow-2xl flex items-center justify-center aspect-square max-w-[260px] mx-auto">
             <img src="logo.jpeg" alt="JossyStudioDC Logo Oficial" class="w-full h-full object-contain">
         </div>
 
-        <!-- FRASE PROMOCIONAL -->
         <div class="text-center space-y-1 pt-1">
             <h2 class="font-serif italic text-lg sm:text-xl text-luxury-beige">"Realza tu belleza, descubre tu estilo"</h2>
         </div>
 
         <!-- BOTONES PRINCIPALES -->
         <div class="space-y-3 pt-1">
-            <!-- Botón Reservar Cita -->
-            <a href="https://wa.me/51993676070?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita." target="_blank"
-               class="w-full py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-widest text-black gold-gradient-bg hover:scale-[1.02] transition-all shadow-xl shadow-luxury-gold/20 flex items-center justify-center gap-3">
+            <!-- Botón Reservar Cita (Ahora abre el selector de staff en lugar de abrir un solo número directo) -->
+            <button onclick="openStaffModal()" 
+               class="w-full py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-widest text-black gold-gradient-bg hover:scale-[1.02] transition-all shadow-xl shadow-luxury-gold/20 flex items-center justify-center gap-3 cursor-pointer">
                 <i class="fa-regular fa-calendar-check text-base"></i> Reservar Mi Cita
-            </a>
+            </button>
 
-            <!-- Botón Instagram -->
             <a href="https://www.instagram.com/jossystudio_dc?knvt=MTBuMmljZHhzMTQ3&utm_source=qr" target="_blank"
                class="w-full py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-medium uppercase tracking-wider text-gray-200 bg-luxury-dark/95 border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-center gap-3 group shadow-lg">
                 <i class="fa-brands fa-instagram text-lg text-luxury-gold group-hover:text-black transition-colors"></i> Síguenos en Instagram
             </a>
 
-            <!-- Botón TikTok -->
             <a href="http://www.tiktok.com/@jossystudiodc" target="_blank"
                class="w-full py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-medium uppercase tracking-wider text-gray-200 bg-luxury-dark/95 border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-center gap-3 group shadow-lg">
                 <i class="fa-brands fa-tiktok text-lg text-luxury-gold group-hover:text-black transition-colors"></i> Mira nuestros videos en TikTok
@@ -104,16 +130,15 @@
 
     </main>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/51993676070?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20JossyStudioDC%20y%20quisiera%20informaci%C3%B3n%20para%20separar%20una%20cita.%20%C2%BFQu%C3%A9%20horarios%20tienen%20disponibles%3F" 
-       target="_blank" 
-       class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-300 group"
+    <!-- BOTÓN FLOTANTE DE WHATSAPP (También abre el selector de staff) -->
+    <button onclick="openStaffModal()" 
+       class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-300 group cursor-pointer"
        aria-label="Reservar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span class="absolute right-16 bg-white text-luxury-black text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            ¡Escríbenos al WhatsApp!
+            ¡Elige con quién atenderte!
         </span>
-    </a>
+    </button>
 
     <!-- FOOTER -->
     <footer class="relative z-10 text-center text-xs text-gray-400 pt-4">
