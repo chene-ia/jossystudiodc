@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <!-- MODAL / SELECTOR DE STAFF PARA WHATSAPP -->
+    <!-- MODAL / SELECTOR DE STAFF (Estética refinada por líneas) -->
     <div id="staffModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
         <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center space-y-4">
             <button onclick="closeStaffModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-luxury-card w-8 h-8 rounded-full flex items-center justify-center border border-luxury-gold/30">
@@ -41,29 +41,47 @@
             
             <div class="space-y-1 pt-2">
                 <span class="text-[10px] uppercase tracking-[0.3em] text-luxury-beige font-semibold">Atención Personalizada</span>
-                <h3 class="font-serif text-2xl font-bold gold-gradient-text">Elige con quién deseas atenderte</h3>
+                <h3 class="font-serif text-2xl font-bold gold-gradient-text">Elige el servicio que deseas</h3>
             </div>
 
-            <div class="space-y-2.5 pt-2">
-                <!-- Opcion 1: Manicurista (Número Principal actual) -->
-                <a href="https://wa.me/51993676070?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita%20de%20Manicure." target="_blank"
-                   class="w-full py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-gray-200 bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-hand-sparkles text-luxury-gold group-hover:text-black"></i> Manicurista (Uñas)</span>
-                    <i class="fa-brands fa-whatsapp text-[#25D366] text-base"></i>
+            <div class="space-y-3 pt-2">
+                <!-- Opcion 1: Manicurista / Lashista - Mayte Silva -->
+                <a href="https://wa.me/51993676070?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20cita%20con%20Mayte%20Silva%20(Manicurista%20y%20Lashista)." target="_blank"
+                   class="w-full py-3 px-4 rounded-xl bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
+                    <span class="flex items-center gap-3 text-left">
+                        <i class="fa-solid fa-hand-sparkles text-luxury-gold group-hover:text-black text-lg"></i>
+                        <span>
+                            <strong class="block uppercase tracking-wider text-xs font-bold">Manicurista / Lashista</strong>
+                            <span class="text-xs text-luxury-beige group-hover:text-black/80 font-medium">Mayte Silva</span>
+                        </span>
+                    </span>
+                    <i class="fa-brands fa-whatsapp text-[#25D366] group-hover:text-black text-xl"></i>
                 </a>
 
-                <!-- Opcion 2: Estilista (Número de prueba 1) -->
-                <a href="https://wa.me/51999999991?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita%20con%20la%20Estilista." target="_blank"
-                   class="w-full py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-gray-200 bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-scissors text-luxury-gold group-hover:text-black"></i> Estilista (Cabello)</span>
-                    <i class="fa-brands fa-whatsapp text-[#25D366] text-base"></i>
+                <!-- Opcion 2: Estilista / Maquilladora - Sofia Huerta -->
+                <a href="https://wa.me/51999999991?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20cita%20con%20Sofia%20Huerta%20(Estilista%20y%20Maquilladora)." target="_blank"
+                   class="w-full py-3 px-4 rounded-xl bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
+                    <span class="flex items-center gap-3 text-left">
+                        <i class="fa-solid fa-scissors text-luxury-gold group-hover:text-black text-lg"></i>
+                        <span>
+                            <strong class="block uppercase tracking-wider text-xs font-bold">Estilista / Maquilladora</strong>
+                            <span class="text-xs text-luxury-beige group-hover:text-black/80 font-medium">Sofia Huerta</span>
+                        </span>
+                    </span>
+                    <i class="fa-brands fa-whatsapp text-[#25D366] group-hover:text-black text-xl"></i>
                 </a>
 
-                <!-- Opcion 3: Fisioterapeuta / Masajista (Número de prueba 2) -->
-                <a href="https://wa.me/51999999992?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20separar%20una%20cita%20de%20Fisioterapia%20o%20Masajes." target="_blank"
-                   class="w-full py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-gray-200 bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-spa text-luxury-gold group-hover:text-black"></i> Fisioterapeuta (Masajes)</span>
-                    <i class="fa-brands fa-whatsapp text-[#25D366] text-base"></i>
+                <!-- Opcion 3: Fisioterapeuta / Masajista - Priscila Silva -->
+                <a href="https://wa.me/51999999992?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20cita%20con%20Priscila%20Silva%20(Fisioterapeuta%20y%20Masajista)." target="_blank"
+                   class="w-full py-3 px-4 rounded-xl bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
+                    <span class="flex items-center gap-3 text-left">
+                        <i class="fa-solid fa-spa text-luxury-gold group-hover:text-black text-lg"></i>
+                        <span>
+                            <strong class="block uppercase tracking-wider text-xs font-bold">Fisioterapeuta / Masajista</strong>
+                            <span class="text-xs text-luxury-beige group-hover:text-black/80 font-medium">Priscila Silva</span>
+                        </span>
+                    </span>
+                    <i class="fa-brands fa-whatsapp text-[#25D366] group-hover:text-black text-xl"></i>
                 </a>
             </div>
         </div>
@@ -92,7 +110,6 @@
 
         <!-- BOTONES PRINCIPALES -->
         <div class="space-y-3 pt-1">
-            <!-- Botón Reservar Cita (Ahora abre el selector de staff en lugar de abrir un solo número directo) -->
             <button onclick="openStaffModal()" 
                class="w-full py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-widest text-black gold-gradient-bg hover:scale-[1.02] transition-all shadow-xl shadow-luxury-gold/20 flex items-center justify-center gap-3 cursor-pointer">
                 <i class="fa-regular fa-calendar-check text-base"></i> Reservar Mi Cita
@@ -130,7 +147,7 @@
 
     </main>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP (También abre el selector de staff) -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <button onclick="openStaffModal()" 
        class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-300 group cursor-pointer"
        aria-label="Reservar por WhatsApp">
