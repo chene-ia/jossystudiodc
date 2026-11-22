@@ -17,22 +17,53 @@
 </head>
 <body class="bg-luxury-black text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-black min-h-screen relative flex flex-col justify-between py-6 px-4">
 
-    <!-- MODAL / ANUNCIO DE INICIO (HORARIOS) -->
+    <!-- MODAL / ANUNCIO DE INICIO (CARRUSEL DE NUEVOS SERVICIOS Y HORARIOS) -->
     <div id="promoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
         <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-5 max-w-sm w-full shadow-2xl text-center space-y-4 animate-scaleUp">
+            
+            <!-- Botón X flotante para cerrar el anuncio -->
             <button onclick="closeModal()" class="absolute top-3 right-3 z-20 bg-luxury-black/80 hover:bg-luxury-gold text-luxury-gold hover:text-black w-9 h-9 rounded-full flex items-center justify-center border border-luxury-gold/50 transition-all shadow-md" aria-label="Cerrar anuncio">
                 <i class="fa-solid fa-xmark text-base"></i>
             </button>
-            <div class="rounded-2xl overflow-hidden border border-luxury-gold/30 w-full">
-                <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto block object-cover">
+
+            <!-- Contenedor del Carrusel de Imágenes -->
+            <div class="relative rounded-2xl overflow-hidden border border-luxury-gold/30 w-full bg-black/40">
+                
+                <!-- Diapositiva 1: Nuevos Servicios (Aparece Primero) -->
+                <div class="carousel-slide block">
+                    <img src="nuevos-servicios.jpeg" alt="Nuevos Servicios JossyStudioDC" class="w-full h-auto block object-cover max-h-[360px] mx-auto">
+                </div>
+
+                <!-- Diapositiva 2: Horarios de Atención (Aparece Segundo) -->
+                <div class="carousel-slide hidden">
+                    <img src="horarios.jpeg" alt="Horarios de Atención JossyStudioDC" class="w-full h-auto block object-cover max-h-[360px] mx-auto">
+                </div>
+
+                <!-- Botón Izquierda (Anterior) -->
+                <button onclick="changeSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-luxury-gold text-luxury-gold hover:text-black w-8 h-8 rounded-full flex items-center justify-center border border-luxury-gold/40 transition-all">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+
+                <!-- Botón Derecha (Siguiente) -->
+                <button onclick="changeSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-luxury-gold text-luxury-gold hover:text-black w-8 h-8 rounded-full flex items-center justify-center border border-luxury-gold/40 transition-all">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
             </div>
-            <button onclick="closeModal()" class="w-full py-3.5 px-6 rounded-2xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
+
+            <!-- Indicadores de puntos (Dots) -->
+            <div class="flex justify-center gap-2 pt-1">
+                <span class="dot w-2.5 h-2.5 rounded-full bg-luxury-gold cursor-pointer transition-all" onclick="currentSlide(1)"></span>
+                <span class="dot w-2.5 h-2.5 rounded-full bg-luxury-gold/40 cursor-pointer transition-all" onclick="currentSlide(2)"></span>
+            </div>
+
+            <!-- Botón de acción principal -->
+            <button onclick="closeModal()" class="w-full py-3 px-6 rounded-2xl text-xs font-bold uppercase tracking-widest text-black gold-gradient-bg hover:opacity-95 transition-all shadow-lg shadow-luxury-gold/20">
                 VER PÁGINA PRINCIPAL
             </button>
         </div>
     </div>
 
-    <!-- MODAL / SELECTOR DE STAFF (Estética refinada por líneas) -->
+    <!-- MODAL / SELECTOR DE STAFF PARA WHATSAPP -->
     <div id="staffModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300">
         <div class="relative bg-luxury-dark border-2 border-luxury-gold/50 rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center space-y-4">
             <button onclick="closeStaffModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-luxury-card w-8 h-8 rounded-full flex items-center justify-center border border-luxury-gold/30">
@@ -45,7 +76,6 @@
             </div>
 
             <div class="space-y-3 pt-2">
-                <!-- Opcion 1: Manicurista / Lashista - Mayte Silva -->
                 <a href="https://wa.me/51993676070?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20cita%20con%20Mayte%20Silva%20(Manicurista%20y%20Lashista)." target="_blank"
                    class="w-full py-3 px-4 rounded-xl bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
                     <span class="flex items-center gap-3 text-left">
@@ -58,7 +88,6 @@
                     <i class="fa-brands fa-whatsapp text-[#25D366] group-hover:text-black text-xl"></i>
                 </a>
 
-                <!-- Opcion 2: Estilista / Maquilladora - Sofia Huerta -->
                 <a href="https://wa.me/51999999991?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20cita%20con%20Sofia%20Huerta%20(Estilista%20y%20Maquilladora)." target="_blank"
                    class="w-full py-3 px-4 rounded-xl bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
                     <span class="flex items-center gap-3 text-left">
@@ -71,7 +100,6 @@
                     <i class="fa-brands fa-whatsapp text-[#25D366] group-hover:text-black text-xl"></i>
                 </a>
 
-                <!-- Opcion 3: Fisioterapeuta / Masajista - Priscila Silva -->
                 <a href="https://wa.me/51999999992?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20cita%20con%20Priscila%20Silva%20(Fisioterapeuta%20y%20Masajista)." target="_blank"
                    class="w-full py-3 px-4 rounded-xl bg-luxury-card border border-luxury-gold/30 hover:bg-luxury-gold hover:text-black transition-all flex items-center justify-between group shadow-md">
                     <span class="flex items-center gap-3 text-left">
